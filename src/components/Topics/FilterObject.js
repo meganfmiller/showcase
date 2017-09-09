@@ -7,18 +7,18 @@ class FilterObject extends Component {
         this.state = {
             employees: [
                 {
-                  name: 'Jimmy Joe',
-                  title: 'Hack0r',
-                  age: 12,
+                  name: 'Megan',
+                  title: 'Junior Developer',
+                  age: 23,
                 },
                 {
-                  name: 'Jeremy Schrader',
-                  age: 24,
+                  name: 'Emily',
+                  age: 19,
                   hairColor: 'brown'
                 },
                 {
-                  name: 'Carly Armstrong',
-                  title: 'CEO',
+                  name: 'Kyle',
+                  title: 'Senior Developer',
                 }
               ],
         
@@ -53,8 +53,8 @@ class FilterObject extends Component {
                 <h4>Filter Object</h4>
                 <span className='puzzleText'>{ JSON.stringify(this.state.employees, null, 10) }</span>
                 <input className='inputLine' onChange={(e) => this.updateInput(e.target.value)}></input>
-                <button className='confirmationButton' onClick={() => this.updateValue(this.state.userInput)}>Go</button>
-                <span className='resultsBox filterObjectRB'>{ JSON.stringify(this.state.filteredEmployees, null, 10) }</span>
+                <button className='confirmationButton' onClick={() => this.updateValue(this.state.userInput)}>Filter</button>
+                <span className='resultsBox filterObjectRB'>Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) }</span>
             </div>
         )
     }
